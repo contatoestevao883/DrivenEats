@@ -111,16 +111,13 @@ button{
     display: flex;
     justify-content: space-between;
 }
+
 .checkbox ion-icon{
-    display: none;
     width:16px;
     height: 16px;
     margin-top: 12px;
     margin-right: 15px;
-    color: #32B72F;
-}
-.show{
-    display: block;
+    color: white
 }
 
 .selected{
@@ -130,6 +127,10 @@ button{
     height: 230px;
 }
 
+.selected ion-icon{
+    color: #32B72F;
+}
+
 .selectedDrinks{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
     border-radius: 9px;
@@ -137,9 +138,25 @@ button{
     height: 230px;
 }
 
+.selectedDrinks ion-icon{
+    color: #32B72F;
+}
+
 .selectedDesert{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
     border-radius: 9px;
     width: 172px;
     height: 230px;
+}
+
+.selectedDesert ion-icon{
+    color: #32B72F;
+}
+
+.modal{
+    width: 377px;
+    height: 353px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    background-color: #50D074;
 }
