@@ -1,4 +1,4 @@
-const plate = document.querySelector('.prato')
+const plate = document.querySelector('.prato').innerText
 
 function itemSelected(pedidoClicado){
 
@@ -9,6 +9,7 @@ function itemSelected(pedidoClicado){
     }
     const buttonSelected = document.querySelector(pedidoClicado)
     buttonSelected.classList.add('selected')
+    buttonActive()
 }
 
 
@@ -22,34 +23,54 @@ function itemSelectedDrinks(pedidoClicado){
     }
     const buttonSelected = document.querySelector(pedidoClicado)
     buttonSelected.classList.add('selectedDrinks')
+    buttonActive()
    
 }
 
 function itemSelectedDesert(pedidoClicado){
    
     const selectedDesert = document.querySelector('.selectedDesert')
-    const button = document.querySelector('button')
 
     if(selectedDesert !== null ){
         selectedDesert.classList.remove('selectedDesert')
     }
     const buttonSelected = document.querySelector(pedidoClicado)
     buttonSelected.classList.add('selectedDesert')
-    button.removeAttribute('disabled')
-    button.innerText = 'Fechar pedido'
-    button.style.background = '#32B72F'
-    button.style.color = 'white'
+    buttonActive()
+
 }
+
+function buttonActive(){
+    const selected = document.querySelector('.selected')
+    const selectedDrinks = document.querySelector('.selectedDrinks')
+    const selectedDesert = document.querySelector('.selectedDesert')
+    const button = document.querySelector('button')
+    
+    if(selected !== null && selectedDrinks !== null && selectedDesert !== null){
+        button.disabled = false
+        button.innerText = 'Fechar pedido'
+        button.style.background = '#32B72F'
+        button.style.color = 'white'
+    }
+}
+
 
 function showModal(){
     const modal = document.querySelector(".modal")
     const main = document.querySelector('main')
     const header = document.querySelector("header")
     const button = document.querySelector("button")
-    
+    const pedido1 = document.createElement('h3')
+
+
     modal.classList.remove("hidden")
     button.style.opacity = '5%'
     main.style.opacity = '5%'
     header.style.opacity = '5%'
+
+    
+    pedido1.innerText = plate
+
+    modal.appendChild(pedido1)
 
 }
