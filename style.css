@@ -175,3 +175,18 @@ button{
 .hidden{
     display: none;
 }
+
+.plate1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.drink1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dessert1{
+    display: flex;
+    justify-content: space-between;
+}
