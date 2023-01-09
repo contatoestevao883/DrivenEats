@@ -53,10 +53,6 @@ main h2{
     margin: 20px 0px 20px 20px;
 }
 
-.card .selected{
-
-}
-
 .card img{
     margin: 15px 15px 0 15px;
 }
@@ -154,9 +150,27 @@ button{
 }
 
 .modal{
+    position: absolute;
+    bottom: 20%;
+    right: 20px;
+    display: flex;
+    justify-content: center;
     width: 377px;
     height: 353px;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     background-color: #50D074;
+}
+.container{
+    margin-top: 20px;
+    color: white;
+}
+
+.container h2{
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.hidden{
+    display: none;
 }

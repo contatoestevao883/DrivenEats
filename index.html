@@ -15,13 +15,20 @@
         <p>Sua comida em 6 minutos</p>
     </header>
 
+    <div class="modal hidden">
+        <div class="container">
+            <h2>Confirme seu pedido</h2>
+        </div>
+   </div>
+
     <main>
+       
         <h2>Primeiro, seu prato</h2>
         <div class="menu">
 
             <div onclick="itemSelected('.pedido')" data-test="dish" class="card pedido">
                 <img src="./img/frango_yin_yang.png" alt="frango">
-                <p>Frango Yin Yang</p>
+                <p class="prato">Frango Yin Yang</p>
                 <div class="span">
                     <span>Um pouco de batata, um pouco de salada</span>
                 </div>
@@ -180,7 +187,7 @@
     <footer>
         <div class="footer">
             <div class="button">
-                <button disabled data-test="order-btn">Selecione os 3 itens <br>para fechar o pedido</button>
+                <button onclick="showModal()" disabled data-test="order-btn">Selecione os 3 itens <br>para fechar o pedido</button>
             </div>
         </div>
     </footer>

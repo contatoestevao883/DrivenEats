@@ -1,3 +1,5 @@
+const plate = document.querySelector('.prato')
+
 function itemSelected(pedidoClicado){
 
     const selected = document.querySelector('.selected')
@@ -34,7 +36,20 @@ function itemSelectedDesert(pedidoClicado){
     const buttonSelected = document.querySelector(pedidoClicado)
     buttonSelected.classList.add('selectedDesert')
     button.removeAttribute('disabled')
-        button.innerText = 'Fechar o pedido'
-        button.style.background = '#32B72F'
-        button.style.color = 'white'
+    button.innerText = 'Fechar pedido'
+    button.style.background = '#32B72F'
+    button.style.color = 'white'
+}
+
+function showModal(){
+    const modal = document.querySelector(".modal")
+    const main = document.querySelector('main')
+    const header = document.querySelector("header")
+    const button = document.querySelector("button")
+    
+    modal.classList.remove("hidden")
+    button.style.opacity = '5%'
+    main.style.opacity = '5%'
+    header.style.opacity = '5%'
+
 }
