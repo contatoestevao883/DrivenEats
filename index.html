@@ -14,30 +14,34 @@
         <h1>DrivenEats</h1>
         <p>Sua comida em 6 minutos</p>
     </header>
-
-    <div class="modal hidden">
-        <div class="container">
-            <h2>Confirme seu pedido</h2>
-
-            <div class="plate1">
-
+    
+        <div class="modal hidden">
+            <div data-test="confirm-order-modal" class="confirmar-pedido">
+              <div class="titulo">Confirme seu pedido</div>
+              <ul>
+                <li class="prato">
+                  <div class="nome">Frango Yin Yang</div>
+                  <div class="preco">14,90</div>
+                </li>
+                <li class="bebida">
+                  <div class="nome">Coquinha gelada</div>
+                  <div class="preco">4,90</div>
+                </li>
+                <li class="sobremesa">
+                  <div class="nome">Pudim</div>
+                  <div class="preco">7,90</div>
+                </li>
+                <li class="total">
+                  <div>Total</div>
+                  <div class="preco-total">R$ **</div>
+                </li>
+              </ul>
+              <button data-test="confirm-order-btn" class="confirmar">
+                Tudo certo, pode pedir!
+              </button>
+              <button data-test="cancel-order-btn" class="cancelar" onclick="cancel()">Cancelar</button>
             </div>
-
-            <div class="drink1">
-
-            </div>
-
-            <div class="dessert1">
-
-            </div>
-
-            <div class="total">
-
-            </div>
-
-
         </div>
-   </div>
 
     <main>
        
@@ -205,7 +209,7 @@
     <footer>
         <div class="footer">
             <div class="button">
-                <button onclick="showModal()" disabled data-test="order-btn">Selecione os 3 itens <br>para fechar o pedido</button>
+                <button class="final-button" onclick="showModal()" disabled data-test="order-btn">Selecione os 3 itens <br>para fechar o pedido</button>
             </div>
         </div>
     </footer>
