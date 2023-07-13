@@ -67,15 +67,15 @@ function showModal(){
 
     const titlePlate = document.querySelector('prato .nome');
     titlePlate.innerHTML = titlePlate;
-    document.querySelector('.prato .preco').innerHTML = pricePlate;
+    pricePlate = document.querySelector('.prato .preco').innerHTML
 
     const titleDrink = document.querySelector('.pedido .nome');
     titleDrink.innerHTML = titleDrink;
-    document.querySelector('.prato .preco').innerHTML = priceDrink;
+    priceDrink = document.querySelector('.prato .preco').innerHTML 
 
     const titleDesert = document.querySelector('.pedido .nome');    
     titleDesert.innerHTML = titleDesert;    
-    document.querySelector('.prato .preco').innerHTML = priceDesert;
+    priceDesert = document.querySelector('.prato .preco').innerHTML 
 
 
     total = pricePlate + priceDrink + priceDesert;
